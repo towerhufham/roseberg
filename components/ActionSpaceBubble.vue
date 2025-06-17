@@ -44,6 +44,7 @@
     return {
       "bg-green-200": active && generator,
       "bg-yellow-100": active && !generator,
+      "cursor-pointer": active,
       "bg-slate-300": !active,
       "border-green-500": generator,
       "border-yellow-500": !generator

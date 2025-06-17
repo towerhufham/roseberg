@@ -1,6 +1,6 @@
 <template>
   <div class="items-start flex flex-wrap gap-5 p-3 bg-blue-300">
-    <button @click="tryStartBuilding" class="border-2 border-green-400 bg-green-50 rounded-lg shadow-md p-1 hover:bg-white text-xl">
+    <button @click="tryStartBuilding" class="border-2 border-green-400 bg-green-50 rounded-lg shadow-md p-1 cursor-pointer hover:bg-white text-xl">
       {{ state.isBuilding ? "Building..." : "Build🔨" }}
     </button>
     <ActionSpaceBubble v-for="action in sortActionSpaces(store.blueprintSpaces)" :key="action.name" v-bind:action="action"  @click="handleBuild(action)" />
