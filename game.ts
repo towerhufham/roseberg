@@ -90,10 +90,9 @@ export const useStore = defineStore("game", () => {
     inventory.value[resource] += n
   }
   const takeAction = (as: ActionSpace) => {
-    //make sure we can pay for it, it hasn't been taken, & have time
-    if (inventory.value["Time"] <= 0 || !as.active) {
-      return false
-    }
+    //space needs to be active
+    if (!as.active) return false
+    //make sure we can pay for it
     for (const c of as.cost) {
       if (inventory.value[c.resource] < c.amount) {
         return false
