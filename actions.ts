@@ -277,5 +277,24 @@ export const ALL_ACTIONDEFS: ActionSpaceDefinition[] = [
         amount: 2
       }
     ]
+  },
+  {
+    name: "Irrigation",
+    cost: [
+      {
+        resource: "Grain",
+        amount: 1
+      },
+      {
+        resource: "Stone",
+        amount: 1
+      }
+    ],
+    gain: [
+      {
+        resource: "Grain",
+        amount: 3
+      }
+    ]
   }
 ] as const;
