@@ -1,10 +1,12 @@
 <template>
-  <div class="items-start flex flex-wrap gap-5 p-3 bg-blue-300">
-    <button @click="tryStartBuilding" class="border-2 border-green-400 bg-green-50 rounded-lg shadow-md p-1 cursor-pointer hover:bg-white text-xl">
-      {{ state.isBuilding ? "Building..." : "Build🔨" }}
-    </button>
-    <ActionSpaceBubble v-for="action in sortActionSpaces(store.blueprintSpaces)" :key="action.name" v-bind:action="action"  @click="handleBuild(action)" />
-  </div>
+  <section class="p-3 bg-blue-300">
+    <div class="flex flex-wrap items-start gap-5">
+      <button @click="tryStartBuilding" class="border-2 border-green-400 bg-green-50 rounded-lg shadow-md p-1 cursor-pointer hover:bg-white text-xl">
+        {{ state.isBuilding ? "Building..." : "Build🔨" }}
+      </button>
+      <ActionSpaceBubble v-for="action in sortActionSpaces(store.blueprintSpaces)" :key="action.name" v-bind:action="action"  @click="handleBuild(action)" />
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">

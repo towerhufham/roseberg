@@ -1,10 +1,12 @@
 <template>
-  <div class="h-full items-start flex flex-wrap content-start gap-5 p-3">
-    <button @click="refresh" class="border-2 border-green-400 bg-green-50 rounded-lg shadow-md p-1 cursor-pointer hover:bg-white text-xl">
-      ⌛
-    </button>
-    <ActionSpaceBubble v-for="action in sortActionSpaces(store.builtSpaces)" v-bind:action="action" :key="action.name" @click="store.takeAction(action)" />
-  </div>
+  <section class="flex-grow">
+    <div class="items-start justify-start flex flex-wrap gap-5 p-3">
+      <button @click="refresh" class="border-2 border-green-400 bg-green-50 rounded-lg shadow-md p-1 cursor-pointer hover:bg-white text-xl">
+        ⌛
+      </button>
+      <ActionSpaceBubble v-for="action in sortActionSpaces(store.builtSpaces)" v-bind:action="action" :key="action.name" @click="store.takeAction(action)" />
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
