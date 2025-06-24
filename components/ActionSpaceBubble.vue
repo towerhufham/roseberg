@@ -7,7 +7,9 @@
           {{ formatResourceCost(cost) }}
       </span>
       <span v-if="action.cost.length > 0" class="text-xl text-yellow-400">
-        🠊
+        <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M4 15V9h8V4.16L19.84 12L12 19.84V15z"/>
+        </svg>
       </span>
       <span v-for="gain in action.gain" :key="gain.resource" class="text-xl">
           {{ formatResourceGain(gain) }}

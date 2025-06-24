@@ -296,5 +296,137 @@ export const ALL_ACTIONDEFS: ActionSpaceDefinition[] = [
         amount: 3
       }
     ]
+  },
+  {
+    name: "Forestry",
+    cost: [
+      {
+        resource: "Stone",
+        amount: 1
+      }
+    ],
+    gain: [
+      {
+        resource: "Wood",
+        amount: 3
+      }
+    ]
+  },
+  {
+    name: "Cookies",
+    cost: [
+      {
+        resource: "Wood",
+        amount: 1
+      },
+      {
+        resource: "Grain",
+        amount: 1
+      },
+      {
+        resource: "Stone",
+        amount: 1
+      }
+    ],
+    gain: [
+      {
+        resource: "Cookie",
+        amount: 2
+      }
+    ]
+  },
+  {
+    name: "Cookie Market",
+    cost: [
+      {
+        resource: "Cookie",
+        amount: 1
+      }
+    ],
+    randomGain: [
+      {
+        resource: "Rose",
+        amount: 1
+      },
+      {
+        resource: "Fish",
+        amount: 2
+      },
+      {
+        resource: "Mushroom",
+        amount: 1
+      }
+    ],
+    gain: []
+  },
+  {
+    name: "Cookie Industry",
+    cost: [
+      {
+        resource: "Cookie",
+        amount: 3
+      }
+    ],
+    randomGain: [
+      {
+        resource: "Points",
+        amount: 3
+      },
+      {
+        resource: "Builds",
+        amount: 2
+      },
+      {
+        resource: "Time",
+        amount: 1
+      }
+    ],
+    gain: []
+  },
+  {
+    name: "Nature Appreciation",
+    cost: [
+      {
+        resource: "Wood",
+        amount: 10
+      },
+      {
+        resource: "Stone",
+        amount: 1
+      }
+    ],
+    gain: [
+      {
+        resource: "Points",
+        amount: 5
+      },
+      {
+        resource: "Time",
+        amount: 1
+      }
+    ]
+  },
+  {
+    name: "Feast",
+    cost: [
+      {
+        resource: "Fish",
+        amount: 3
+      },
+      {
+        resource: "Mushroom",
+        amount: 2
+      },
+      {
+        resource: "Cookie",
+        amount: 1
+      }
+    ],
+    gain: [
+      {
+        resource: "Points",
+        amount: 12
+      }
+    ]
   }
 ] as const;

@@ -3,7 +3,7 @@ import { ref } from "vue"
 import { inPlaceShuffle, randInt } from "./utils"
 import { ALL_ACTIONDEFS } from "./actions"
 
-export const ALL_RESOURCES = ["Points", "Time", "Builds", "Wood", "Grain", "Stone", "Fish", "Mushroom", "Rose"] as const
+export const ALL_RESOURCES = ["Points", "Time", "Builds", "Wood", "Grain", "Stone", "Fish", "Mushroom", "Rose", "Cookie"] as const
 export type Resource = typeof ALL_RESOURCES[number]
 export type ResourcePool = {[key in Resource]: number}
 
@@ -18,6 +18,7 @@ export const getEmoji = (resource: Resource) => {
     Fish: "🐟",
     Mushroom: "🍄",
     Rose: "🌹",
+    Cookie: "🍪"
   }
   return table[resource]
 }
@@ -74,6 +75,7 @@ export const useStore = defineStore("game", () => {
     Fish: 0,
     Mushroom: 0,
     Rose: 0,
+    Cookie: 0
   })
 
   const actionsTaken: Ref<ActionSpace[]> = ref([])
