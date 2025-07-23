@@ -8,4 +8,4 @@ cmds = ['bun install']
 cmds = ['bun run build']
 
 [start]
-cmd = 'bun run preview'
+cmd = 'bun run .output/server/index.mjs'
